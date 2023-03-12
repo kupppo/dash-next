@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Layout from '@/components/layout'
 import { useState } from 'react'
 import styles from '@/styles/home.module.css'
 import classnames from 'classnames/bind'
@@ -13,7 +14,7 @@ export default function Home() {
         <title>DASH Randomizer</title>
         <meta name="description" content="Super Metroid Randomizer" />
       </Head>
-      <main>
+      <Layout>
         <div className={cx('video-container', { videoLoaded })}>
           <video
             src="/recall-bg.mp4"
@@ -32,7 +33,7 @@ export default function Home() {
           <h1 className={styles['title']}>DASH: Recall</h1>
           <h2 className={styles['tagline']}>A reimagining and rebalancing logic</h2>
         </div>
-      </main>
+      </Layout>
     </>
   )
 }
